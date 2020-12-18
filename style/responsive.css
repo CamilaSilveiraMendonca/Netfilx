@@ -1,0 +1,18 @@
+@media screen and (max-width:700px){    /*@media screen and() significa que aplicarei uma regra a tela e o que está entre parênteses é o que informa a configuração da tela que ativa essa regra. Nesse caso, está dizendo que será aplicado quando a tela for até, no máximo, 700px*/
+    header .container{
+    display: flex;
+    flex-direction: column; /*Joga o menu para baixo do título*/
+    }
+
+    .botao{
+        margin-top: 5px;
+        width: 300px;
+    }
+
+}
+
+@media screen and (min-width:1000px){   /*Quando a tela for 1000px em diante, terá essa configuaração*/
+    .descricao{
+        width: 50%;
+    }
+}

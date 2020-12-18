@@ -1,0 +1,144 @@
+/*
+Por padrão, os navegadores colocam um automaticamente um valor de margin e padding. Esse valor não é padronizado. 
+Portanto, o site pode funcionar de forma diferente dependendo do navegador.
+é necessário criar, no CSS, regras de formatação para deixar o site padrão, independente do navegador. Para isso, em alguns momentos faz se necessário criar weebkits e outros; criar um ponto zero.
+*/
+
+:root{  /*root é a raíz do elemento. Aqui, as variáveis serão declaradas. Uma variável é declarada com --*/
+    --preta:rgb(20,20,20);
+}
+
+*{  /* serve para todo elemento*/
+    margin:0;
+    padding:0;
+    box-sizing: border-box; 
+}
+
+/* Explicando o box:
+    Imagine que você tenha declarado um elemento com 400px de largura e começou colocar outros conteúdos dentro dele. Se os conteúdos de dentro forem maiores que 400px, eles começarão "abrir mais a caixa"; a largura da ciaxa irá aumentar e os elementos ultrapassarão a borda. Para que os elementos dessa caixa não ultrapassem os 400px, é necessário colocar box-sizing: border-box, assim se os elementos não couberem dentro da caixa, eles irão "se expremer", mas não "romperão" a caixa.
+*/
+
+/*elementos base*/
+body{
+   background: var(--preta);
+   font-family: 'Arial', Times, serif;
+   color:white;
+   font-size: 18px;
+}
+
+
+header .container{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex; /* isso possibilita usar o flexbox. O flexbox é uma forma de alinhar os elementos internos.*/
+    flex-direction: row;    /*Toda vez que se coloca o display como flex, ele coloca todos os elementos como linha, devido ao flex-direction: row, mesmo por padrão ele já aplicar essa propriedade, eu decidi colocá-la aqui*/
+    align-items: center;    /*alinha de forma vertical*/
+    /*justify-content: space-between; /*alinha de forma horizontal. O valor space-between cria um espaço entre a primeira e segunda tag que estão dentro do container*/
+    background-image: linear-gradient(0.5turn, rgb(0,0,0,.7)10%, rgba(0, 0, 0, 0));
+}
+
+header .logo{
+    margin-right: 45px;
+    width: 95px;
+    height: 29px;
+    cursor: pointer;
+}
+
+header nav a{
+    text-decoration:none;
+    color: rgb(231, 231, 231);
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+header nav a:hover{
+    color:#AAA;
+}
+
+.camada-cima{
+    background: linear-gradient(210deg, rgb(0,0,0,0), rgb(0,0,0,0), rgba(0, 0, 0, .7)90%), url('/img/capa-poderosoChefinho.jpg');
+    background-size: cover;
+    
+}
+
+/*filme principal*/
+.filme-principal{
+    /*Para facilitar a leitura, foi colocada uma camada em cima da imagem. Essa camada é gradiente. Para colocar um linear gradiente, é necessário passar, pelo menos, 2 cores como parâmetro. O turn significa volta, veja:
+    deg → graus, uma volta completa mede 360 graus;
+    grad → grados, uma volta completa mede 400 grados;
+    rad → radianos, uma volta completa mede 2π radianos (3.1416rad);
+    turn → volta, uma volta completa mede 1 turn;
+    */
+    
+    height:550px;
+    
+
+    display: flex;
+    flex-direction: column; /*todos os elementos ficarão em coluna. Com isso, a orientação do justify-content e aligns-items muda*/
+    justify-content: center;
+    align-items: flex-start;    /*Os elementos começarão da esquerda para direita*/
+}
+
+.filme-principal .descricao{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    line-height: 1.3;  /*coloca espaçamento entre linhas*/
+}
+
+.filme-principal .titulo{   /*não precisa colocar .filme-principal, mas é bom colocar por questões de organização*/
+    margin-top: 10%;
+    margin-bottom: 5%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.botao{
+    background-color: rgba(108,113,114,.50);
+    border: none;
+    border-radius: 5px;
+    color: white;
+
+    padding:10px 30px;
+    margin-right: 15px;
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover{
+    background-color:white;
+    color:black;
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    padding-left: 50px;
+}
+
+.filme-principal .container{
+    width: 70%;     /*Esse é o máximo de largura que o que está dentro do container da classe filme-principal poderá alcançar, ou seja, fala até onde vai o texto quando a tela for reduzida*/
+}
+
+.box-filme{
+    height: 139px; /*alterar no photofiltre para a imagem ter 150 de altura e largura proporcional*/
+    width: 246px;
+    display: block;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.classificacao{
+    font-weight: bold;
+}
+
+.carrosel-filmes{
+    margin-top: 3px;
+    margin-left: 50px;
+}
