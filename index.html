@@ -4,6 +4,7 @@
 Pesquise por um ícone, depois copie o código dele e cole onde você quer.-->
 
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,44 +19,49 @@ Pesquise por um ícone, depois copie o código dele e cole onde você quer.-->
 
     <title>NETFLIX</title>
 </head>
-<body>
+
+<body onscroll="mudarFundo()">
     <!--As tags semânticas servem mais para quem está lendo o código, pois para o programa elas têm o mesmo valor-->
     <div class="camada-cima">
-    <header>
-        <div class="container"> 
-            <!-- 
-                A classe container é uma classe wrapper, ou seja, conforme eu mudo o tamanho da tela, ela se ajustará. Isso é mais simples do que alterar o tamanho de cada elemento
-            -->
-            <img src="img/mini_logo.png" class="logo">
-            <nav> <!--nav = navigation. é uma tag semântica, normalmente é usada para criar menus de navegação-->
-                <a href="#">Início</a>
-                <a href="#">Séries</a>
-                <a href="#">Filmes</a>
-                <a href="#">Bombando</a>
-                <a href="#">Minha lista</a>
-            </nav>
-        </div>
-    </header>
+        <header>
+            <div class="container" id="menu-horizontal">
+                <!-- 
+                    A classe container é uma classe wrapper, ou seja, conforme eu mudo o tamanho da tela, ela se ajustará. Isso é mais simples do que alterar o tamanho de cada elemento
+                    -->
+                <img src="img/mini_logo.png" class="logo">
+                <nav>
+                    <!--nav = navigation. é uma tag semântica, normalmente é usada para criar menus de navegação-->
+                    <a href="#">Início</a>
+                    <a href="#">Séries</a>
+                    <a href="#">Filmes</a>
+                    <a href="#">Bombando</a>
+                    <a href="#">Minha lista</a>
+                </nav>
+            </div>
+        </header>
 
-    <main>
-        <div class="filme-principal">
-            <div class="container"> 
-                <h3 class="titulo">O Poderoso Chefinho</h3>
-                <p class="descricao">Ternos, chupetas e uma concorrência implacável. Ser fofinho assim, não é tão fácil quanto parece. </p>
-                <div class="botoes">
-                    <button role="button" class="botao"> <!-- Quando se usa desktop, é muito fácil para o navegador reconhecer um botão, mas quando usa um sistema mobile, é necessário informar a função do botão, para isso, usa-se a propriedade role. O role é responsável por dizer qual é a função de tal elemento.-->
-                        <i class="fas fa-play"></i> <!--O link do ícone que foi copiado e colado-->
-                        Assistir
-                    </button>
-                    <button role="button" class="botao">
-                        <i class="fas fa-info-circle"></i>
-                        Mais informações
-                    </button>
+        <main>
+            <div class="filme-principal">
+                <div class="container">
+                    <h3 class="titulo">O Poderoso Chefinho</h3>
+                    <p class="descricao">Ternos, chupetas e uma concorrência implacável. Ser fofinho assim, não é tão
+                        fácil quanto parece. </p>
+                    <div class="botoes">
+                        <button role="button" class="botao">
+                            <!-- Quando se usa desktop, é muito fácil para o navegador reconhecer um botão, mas quando usa um sistema mobile, é necessário informar a função do botão, para isso, usa-se a propriedade role. O role é responsável por dizer qual é a função de tal elemento.-->
+                            <i class="fas fa-play"></i>
+                            <!--O link do ícone que foi copiado e colado-->
+                            Assistir
+                        </button>
+                        <button role="button" class="botao">
+                            <i class="fas fa-info-circle"></i>
+                            Mais informações
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
-</div>
+        </main>
+    </div>
     <div class="carrosel-filmes">
         <div class="carrosel-minha-lista">
             <p class="classificacao">Minha lista</p>
@@ -121,22 +127,30 @@ Pesquise por um ícone, depois copie o código dele e cole onde você quer.-->
                 </div>
                 <div class="item">
                     <img class="box-filme" src="img/mini9.jpg" alt="" srcset="">
-            </div>
-            <div class="item">
-                <img class="box-filme" src="img/mini10.jpg" alt="" srcset="">
-            </div>
+                </div>
+                <div class="item">
+                    <img class="box-filme" src="img/mini10.jpg" alt="" srcset="">
+                </div>
             </div>
         </div>
     </div>
 
+    <script>
+        let menu = document.getElementById("menu-horizontal");
+        function mudarFundo() {
+            menu.style.background = "black"
+        }
+    </script>
 
 
-    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script> <!--ícones que foram usados-->
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <!--ícones que foram usados-->
     <script src="js/owl/jquery.min.js"></script>
     <script src="js/owl/owl.carousel.min.js"></script>
     <script src="js/owl/setup.js"></script>
- 
 
- 
+
+
 </body>
+
 </html>
