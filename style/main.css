@@ -26,8 +26,13 @@ body{
    font-size: 18px;
 }
 
+header{
+    position: -webkit-sticky; 
+    position: sticky;
+    top: 0;
+}
 
-header .container{
+header .container{  
     padding-top: 20px;
     padding-bottom: 20px;
     display: flex; /* isso possibilita usar o flexbox. O flexbox é uma forma de alinhar os elementos internos.*/
